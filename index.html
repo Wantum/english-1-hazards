@@ -2,18 +2,56 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="0; url=Computer_Room_Safety_Protocol.pdf">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Computer Room Safety Protocol</title>
-  <script>
-    window.location.replace("Computer_Room_Safety_Protocol.pdf");
-  </script>
   <style>
-    body { font-family: system-ui, sans-serif; text-align: center; padding: 3rem; }
-    a { color: #0969da; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      width: 100vw;
+      overflow: hidden;
+      background: #1a1a1a;
+      font-family: system-ui, -apple-system, sans-serif;
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+    .loading {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #888;
+      text-align: center;
+      z-index: -1;
+    }
+    .fallback {
+      position: fixed;
+      bottom: 1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0,0,0,0.7);
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      text-decoration: none;
+    }
   </style>
 </head>
 <body>
-  <p>Redirecting to the document…</p>
-  <p>If nothing happens, <a href="Computer_Room_Safety_Protocol.pdf">click here to open the PDF</a>.</p>
+  <div class="loading">Loading document…</div>
+  <iframe
+    src="https://docs.google.com/gview?url=https://wantum.github.io/english-1-hazards/Computer_Room_Safety_Protocol.pdf&embedded=true"
+    title="Computer Room Safety Protocol"
+    allowfullscreen>
+  </iframe>
+  <a class="fallback" href="Computer_Room_Safety_Protocol.pdf" target="_blank" rel="noopener">
+    Open PDF directly
+  </a>
 </body>
 </html>
